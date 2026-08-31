@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solving | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="detail-page">
+  <p class="eyebrow">🧩 Problem Solving</p>
+  <h1 class="detail-title">Breaking things down</h1>
+  <p class="detail-text">
+    This is the part of Computer Science that hooked me — taking a messy, confusing
+    problem and breaking it into small pieces I can actually solve. Whether it's
+    debugging a JavaScript function or figuring out how to sort a table, I like the
+    process of thinking it through step by step.
+  </p>
+
+  <h2 class="detail-subheading">How I approach it</h2>
+  <ul class="detail-list">
+    <li>Break the problem into the smallest possible steps before writing any code</li>
+    <li>Test one small piece at a time instead of writing everything at once</li>
+    <li>Read error messages carefully instead of guessing — they usually tell you exactly what's wrong</li>
+    <li>Search, read documentation, and ask questions when I'm stuck — not a weakness, just part of learning</li>
+  </ul>
+
+  <h2 class="detail-subheading">Where this shows up</h2>
+  <p class="detail-text" style="text-align: left; margin-bottom: 20px;">
+    My Grade Calculator project is a good example — it needed logic to loop through
+    every course, multiply units by grade points correctly, and handle cases where
+    no courses were entered yet.
+  </p>
+
+  <div class="detail-links">
+    <a href="grade-calculator.html" class="detail-link-card">Grade Calculator →</a>
+    <a href="task-tracker.html" class="detail-link-card">Task Tracker →</a>
+  </div>
+
+  <a href="work.html" class="back-link">← Back to Work</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

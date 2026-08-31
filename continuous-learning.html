@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Learning | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="detail-page">
+  <p class="eyebrow">📚 Continuous Learning</p>
+  <h1 class="detail-title">One project, one concept at a time</h1>
+  <p class="detail-text">
+    I don't believe in waiting until I "know enough" to start building. Every project
+    on this site — including this portfolio itself — taught me something new along the
+    way. That's been my approach: build something real, get stuck, figure it out, repeat.
+  </p>
+
+  <h2 class="detail-subheading">My learning timeline so far</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>HTML & CSS Fundamentals</h3>
+        <p>Started with structure and styling — built my first styled table project.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>JavaScript Basics</h3>
+        <p>Learned to make pages interactive — built the Task Tracker and Grade Calculator.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Building This Portfolio</h3>
+        <p>Practiced structuring a multi-page site, animations, and clean layout design.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Python & Version Control</h3>
+        <p>Currently learning — small scripts in Python, and using Git properly.</p>
+      </div>
+    </div>
+    <div class="timeline-item timeline-future">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>What's Next</h3>
+        <p>Databases, connecting a front-end project to a real backend, and beyond.</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="work.html" class="back-link">← Back to Work</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

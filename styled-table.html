@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Data Table | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="index.html#work" class="nav-pill">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="index.html#gallery" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="project-page">
+  <p class="eyebrow">// project demo</p>
+  <h1 class="project-title">Styled Data Table</h1>
+  <p class="project-text">A responsive HTML table styled with pure CSS — search, sortable columns, and clean row highlighting across 30 countries.</p>
+
+  <input type="text" id="table-search" class="table-search" placeholder="Search by company, contact, or country...">
+
+  <table class="demo-table" id="demo-table">
+    <thead>
+      <tr>
+        <th data-col="0">Company <span class="sort-arrow">↕</span></th>
+        <th data-col="1">Contact <span class="sort-arrow">↕</span></th>
+        <th data-col="2">Country <span class="sort-arrow">↕</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr>
+      <tr><td>Berglunds snabbköp</td><td>Christina Berglund</td><td>Sweden</td></tr>
+      <tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr>
+      <tr><td>Ernst Handel</td><td>Roland Mendel</td><td>Austria</td></tr>
+      <tr><td>Island Trading</td><td>Helen Bennett</td><td>UK</td></tr>
+      <tr><td>Königlich Essen</td><td>Philip Cramer</td><td>Germany</td></tr>
+      <tr><td>Laughing Bacchus Winecellars</td><td>Yoshi Tannamuri</td><td>Canada</td></tr>
+      <tr><td>Magazzini Alimentari Riuniti</td><td>Giovanni Rovelli</td><td>Italy</td></tr>
+      <tr><td>Sapphire Traders</td><td>Adaeze Nwosu</td><td>Nigeria</td></tr>
+      <tr><td>Lagos Fresh Produce</td><td>Emeka Obi</td><td>Nigeria</td></tr>
+      <tr><td>Chukwu & Sons Ltd</td><td>Ifeoma Chukwu</td><td>Nigeria</td></tr>
+      <tr><td>Silk Road Imports</td><td>Wang Lei</td><td>China</td></tr>
+      <tr><td>Fuji Electronics</td><td>Haruto Sato</td><td>Japan</td></tr>
+      <tr><td>Seoul Textiles</td><td>Kim Ji-hoon</td><td>South Korea</td></tr>
+      <tr><td>Mumbai Spice Co.</td><td>Priya Sharma</td><td>India</td></tr>
+      <tr><td>Cairo Cotton House</td><td>Ahmed Farouk</td><td>Egypt</td></tr>
+      <tr><td>Nairobi Coffee Traders</td><td>Grace Wanjiru</td><td>Kenya</td></tr>
+      <tr><td>Accra Cocoa Exports</td><td>Kwame Mensah</td><td>Ghana</td></tr>
+      <tr><td>Cape Town Wine Estate</td><td>Johan van der Merwe</td><td>South Africa</td></tr>
+      <tr><td>São Paulo Auto Parts</td><td>Carlos Silva</td><td>Brazil</td></tr>
+      <tr><td>Buenos Aires Leather Co.</td><td>Lucía Fernández</td><td>Argentina</td></tr>
+      <tr><td>Toronto Timber Ltd</td><td>Ethan Brown</td><td>Canada</td></tr>
+      <tr><td>Sydney Marine Supplies</td><td>Olivia Clark</td><td>Australia</td></tr>
+      <tr><td>Auckland Dairy Co.</td><td>Jack Wilson</td><td>New Zealand</td></tr>
+      <tr><td>Dubai Gold Traders</td><td>Fatima Al Mazrouei</td><td>UAE</td></tr>
+      <tr><td>Istanbul Textile House</td><td>Emre Yildiz</td><td>Turkey</td></tr>
+      <tr><td>Moscow Steel Works</td><td>Ivan Petrov</td><td>Russia</td></tr>
+      <tr><td>Paris Fashion House</td><td>Camille Dubois</td><td>France</td></tr>
+      <tr><td>Madrid Olive Traders</td><td>Sofía Martínez</td><td>Spain</td></tr>
+      <tr><td>Amsterdam Bicycle Co.</td><td>Lucas de Vries</td><td>Netherlands</td></tr>
+      <tr><td>Oslo Fisheries</td><td>Erik Johansen</td><td>Norway</td></tr>
+    </tbody>
+  </table>
+
+  <a href="about.html#experience" class="back-link">← Back to Work Experience</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+
+  const searchInput = document.getElementById('table-search');
+  const table = document.getElementById('demo-table');
+  const tbody = table.querySelector('tbody');
+  const headers = table.querySelectorAll('th');
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    tbody.querySelectorAll('tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(query) ? '' : 'none';
+    });
+  });
+
+  let sortDirection = {};
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const col = header.dataset.col;
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const asc = !sortDirection[col];
+      sortDirection = { [col]: asc };
+      rows.sort((a, b) => {
+        const aText = a.children[col].textContent.trim();
+        const bText = b.children[col].textContent.trim();
+        return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+      });
+      rows.forEach(row => tbody.appendChild(row));
+    });
+  });
+</script>
+
+</body>
+</html>

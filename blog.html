@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill">📦 Work</a>
+    <a href="blog.html" class="nav-pill active">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="simple-section">
+  <p class="eyebrow">📰 Blog</p>
+  <h1 class="simple-title">Notes & Learning Logs</h1>
+  <p class="simple-text">Short write-ups on what I'm learning as I build.</p>
+
+  <div class="blog-list">
+    <a href="blog-styled-table.html" class="blog-card">
+      <span class="blog-date">Post 01</span>
+      <h3>What I Learned Building My First Styled Table</h3>
+      <p>From a plain HTML table to something with search and sorting — here's what clicked.</p>
+      <span class="card-hover">Read more →</span>
+    </a>
+
+    <a href="blog-task-tracker.html" class="blog-card">
+      <span class="blog-date">Post 02</span>
+      <h3>Building a Live GPA Calculator with JavaScript</h3>
+      <p>How I got numbers, loops, and a formula to actually calculate something useful.</p>
+      <span class="card-hover">Read more →</span>
+    </a>
+
+    <a href="blog-git.html" class="blog-card">
+      <span class="blog-date">Post 03</span>
+      <h3>Understanding Git: My First Week Using Version Control</h3>
+      <p>Commits, pushes, and why I wish I'd started using Git sooner.</p>
+      <span class="card-hover">Read more →</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

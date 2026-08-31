@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Calculator | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill">📦 Work</a>
+    <a href="blog.html" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="project-page">
+  <p class="eyebrow">// project demo</p>
+  <h1 class="project-title">Grade Calculator</h1>
+  <p class="project-text">Add your courses, enter the score and credit units, and get your GPA instantly.</p>
+
+  <div class="calc-card">
+    <div id="course-list" class="course-list"></div>
+
+    <div class="calc-actions">
+      <button id="add-course" class="btn btn-secondary">+ Add Course</button>
+      <button id="calc-gpa" class="btn">Calculate GPA</button>
+    </div>
+
+    <p id="result" class="gpa-result"></p>
+  </div>
+
+  <a href="about.html#experience" class="back-link">← Back to Work Experience</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+
+  const gradePoints = { A: 5, B: 4, C: 3, D: 2, E: 1, F: 0 };
+
+  function addCourseRow() {
+    const row = document.createElement('div');
+    row.className = 'course-row';
+    row.innerHTML = `
+      <input type="text" placeholder="Course code" class="course-name">
+      <input type="number" placeholder="Units" class="course-units" min="1">
+      <select class="course-grade">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+      </select>
+      <button class="remove-row" title="Remove course">✕</button>
+    `;
+    row.querySelector('.remove-row').addEventListener('click', () => row.remove());
+    document.getElementById('course-list').appendChild(row);
+  }
+
+  document.getElementById('add-course').addEventListener('click', addCourseRow);
+
+  document.getElementById('calc-gpa').addEventListener('click', () => {
+    const rows = document.querySelectorAll('.course-row');
+    let totalUnits = 0;
+    let totalPoints = 0;
+
+    rows.forEach(row => {
+      const units = parseFloat(row.querySelector('.course-units').value) || 0;
+      const grade = row.querySelector('.course-grade').value;
+      totalUnits += units;
+      totalPoints += units * gradePoints[grade];
+    });
+
+    const result = document.getElementById('result');
+    if (totalUnits === 0) {
+      result.textContent = 'Add at least one course with credit units.';
+      result.className = 'gpa-result gpa-empty';
+    } else {
+      const gpa = (totalPoints / totalUnits).toFixed(2);
+      result.textContent = `Your GPA: ${gpa}`;
+      result.className = 'gpa-result';
+    }
+  });
+
+  addCourseRow();
+  addCourseRow();
+  addCourseRow();
+</script>
+
+</body>
+</html>

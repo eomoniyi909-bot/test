@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Version Control | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="detail-page">
+  <p class="eyebrow">🌿 Version Control</p>
+  <h1 class="detail-title">Tracking changes, building good habits</h1>
+  <p class="detail-text">
+    Git is one of the first "real developer" tools I started learning outside of just
+    writing HTML, CSS, and JavaScript. It's less about the code itself and more about
+    building a habit — saving progress properly, so nothing gets lost and every change
+    has a history.
+  </p>
+
+  <h2 class="detail-subheading">What I'm learning</h2>
+  <ul class="detail-list">
+    <li>Initializing a repository and tracking file changes with <code>git init</code></li>
+    <li>Staging and committing changes with clear, descriptive messages</li>
+    <li>Understanding the difference between local changes and pushing to a remote repo</li>
+    <li>Using GitHub to store and share project code</li>
+  </ul>
+
+  <h2 class="detail-subheading">A simple commit flow</h2>
+  <div class="terminal-demo">
+    <div class="terminal-line"><span class="terminal-prompt">$</span> git add .</div>
+    <div class="terminal-line"><span class="terminal-prompt">$</span> git commit -m "Add search and sort to data table"</div>
+    <div class="terminal-line"><span class="terminal-prompt">$</span> git push origin main</div>
+    <div class="terminal-line terminal-success">✓ Changes saved and pushed</div>
+  </div>
+
+  <h2 class="detail-subheading">Why it matters</h2>
+  <p class="detail-text" style="text-align: left;">
+    Even on small solo projects, using Git means I can experiment freely — if something
+    breaks, I can always go back to a version that worked. It's a habit I'm building now
+    so it's second nature by the time I'm working on bigger projects.
+  </p>
+
+  <a href="work.html" class="back-link">← Back to Work</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

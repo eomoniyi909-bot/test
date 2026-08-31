@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backend Basics | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="detail-page">
+  <p class="eyebrow">🗄️ Backend Basics</p>
+  <h1 class="detail-title">Learning what happens behind the interface</h1>
+  <p class="detail-text">
+    Everything I've built so far runs entirely in the browser. I'm now learning Python
+    to understand the other half of web development — how data gets processed, stored,
+    and sent back to the user behind the scenes.
+  </p>
+
+  <h2 class="detail-subheading">What I've covered so far</h2>
+  <ul class="detail-list">
+    <li>Python fundamentals — variables, loops, conditionals, and functions</li>
+    <li>Small scripts, including simple calculators and basic logic-based programs</li>
+    <li>Reading and debugging errors to understand how the code actually runs</li>
+  </ul>
+
+  <h2 class="detail-subheading">How data flows (in theory)</h2>
+  <p class="detail-text" style="text-align: left; margin-bottom: 20px;">
+    A simplified look at what happens when a user interacts with a web app:
+  </p>
+
+  <div class="flow-diagram">
+    <div class="flow-step">
+      <div class="flow-icon">🖥️</div>
+      <p>Browser<br><span>User clicks / submits</span></p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-icon">⚙️</div>
+      <p>Server<br><span>Processes the request</span></p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-icon">🗄️</div>
+      <p>Database<br><span>Stores / retrieves data</span></p>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-icon">🖥️</div>
+      <p>Browser<br><span>Shows the result</span></p>
+    </div>
+  </div>
+
+  <h2 class="detail-subheading">What's next</h2>
+  <p class="detail-text" style="text-align: left;">
+    I want to move from small standalone scripts to connecting Python with real data —
+    learning how databases work, and eventually building a simple API that a front-end
+    project (like my Task Tracker) could actually talk to.
+  </p>
+
+  <a href="work.html" class="back-link">← Back to Work</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

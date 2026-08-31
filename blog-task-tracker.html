@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building a Live GPA Calculator with JavaScript | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill">📦 Work</a>
+    <a href="blog.html" class="nav-pill active">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="blog-post">
+  <p class="eyebrow">📰 Post 02</p>
+  <h1 class="detail-title">Building a Live GPA Calculator with JavaScript</h1>
+
+  <p class="detail-text" style="text-align:left;">
+    My Grade Calculator project was the first time JavaScript actually felt useful to
+    me instead of just abstract syntax. The goal was simple: let someone add courses,
+    enter a grade and credit units, and instantly see their GPA.
+  </p>
+
+  <p class="detail-text" style="text-align:left;">
+    The tricky part was the math logic — looping through every course row, multiplying
+    credit units by grade points, adding them all up, then dividing by total units.
+    Getting that formula right (and handling the case where no courses were entered yet)
+    taught me a lot about writing careful, defensive code.
+  </p>
+
+  <p class="detail-text" style="text-align:left;">
+    I also learned how to dynamically create new HTML elements with JavaScript — every
+    time someone clicks "+ Add Course," a brand new row gets built and inserted into
+    the page. That was my first real experience with DOM manipulation.
+  </p>
+
+  <a href="grade-calculator.html" class="detail-link-card" style="display:inline-block; margin-top: 10px;">Try the calculator →</a>
+
+  <br>
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

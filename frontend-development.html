@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front-end Development | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="detail-page">
+  <p class="eyebrow">💻 Front-end Development</p>
+  <h1 class="detail-title">Turning ideas into interfaces</h1>
+  <p class="detail-text">
+    This is where I spend most of my time — writing HTML, styling with CSS, and using
+    JavaScript to make things actually work. I like the immediate feedback: write code,
+    refresh, see the result. It's the fastest way I've found to learn.
+  </p>
+
+  <h2 class="detail-subheading">What I focus on</h2>
+  <ul class="detail-list">
+    <li>Writing clean, semantic HTML that's easy to read and maintain</li>
+    <li>Styling with CSS — layout, responsiveness, and small details like hover states</li>
+    <li>Using JavaScript to add real interactivity, not just static pages</li>
+  </ul>
+
+  <h2 class="detail-subheading">See it in action</h2>
+  <div class="detail-links">
+    <a href="styled-table.html" class="detail-link-card">Styled Data Table →</a>
+    <a href="task-tracker.html" class="detail-link-card">Task Tracker →</a>
+    <a href="grade-calculator.html" class="detail-link-card">Grade Calculator →</a>
+  </div>
+
+  <a href="work.html" class="back-link">← Back to Work</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

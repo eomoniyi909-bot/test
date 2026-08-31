@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Git: My First Week Using Version Control | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill">📦 Work</a>
+    <a href="blog.html" class="nav-pill active">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="blog-post">
+  <p class="eyebrow">📰 Post 03</p>
+  <h1 class="detail-title">Understanding Git: My First Week Using Version Control</h1>
+
+  <p class="detail-text" style="text-align:left;">
+    For a while, "saving my work" meant duplicating a folder and renaming it
+    <code>project-final-v2</code>. It worked, but it was messy. Learning Git changed that.
+  </p>
+
+  <p class="detail-text" style="text-align:left;">
+    The first concept that clicked was a "commit" — a saved snapshot of my project at a
+    specific point, with a message describing what changed. Instead of guessing which
+    folder had the version I wanted, I could just look through my commit history.
+  </p>
+
+  <p class="detail-text" style="text-align:left;">
+    Pushing to GitHub was the next step — learning that my code could live somewhere
+    safe outside my laptop, and that I could look back at exactly how a project evolved
+    over time. It's a small habit, but one I wish I'd started from my very first project.
+  </p>
+
+  <a href="version-control.html" class="detail-link-card" style="display:inline-block; margin-top: 10px;">See more on Version Control →</a>
+
+  <br>
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

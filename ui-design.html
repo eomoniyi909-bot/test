@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Design | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="index.html#blog" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="detail-page">
+  <p class="eyebrow">🎨 UI Design</p>
+  <h1 class="detail-title">Interfaces that feel alive</h1>
+  <p class="detail-text">
+    I'm drawn to interfaces with a bit of motion and personality — gradient text,
+    floating elements, smooth hover states. It's not just about looking good; small
+    animations can make an interface feel more alive and enjoyable to use.
+  </p>
+
+  <h2 class="detail-subheading">A small demo</h2>
+  <p class="detail-text" style="text-align:left; margin-bottom: 20px;">
+    A little card built with pure CSS — floating particles, a glowing gradient title,
+    and a hover lift effect.
+  </p>
+
+  <div class="ui-demo">
+    <div class="ui-demo-particles">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="ui-demo-card">
+      <h3 class="ui-demo-title">Made with care</h3>
+      <p class="ui-demo-text">Small details make a big difference.</p>
+    </div>
+  </div>
+
+  <h2 class="detail-subheading">Techniques I'm practicing</h2>
+  <ul class="detail-list">
+    <li>CSS gradients and glowing text effects</li>
+    <li>Keyframe animations for floating/moving elements</li>
+    <li>Hover states and smooth transitions</li>
+    <li>Typography pairing — mixing a display font with a clean body font</li>
+  </ul>
+
+  <a href="work.html" class="back-link">← Back to Work</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

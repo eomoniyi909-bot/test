@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill active">📦 Work</a>
+    <a href="blog.html" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="simple-section">
+  <p class="eyebrow">📦 Work</p>
+  <h1 class="simple-title">What I'm Exploring</h1>
+  <p class="simple-text">Beyond finished projects, here's what I'm focused on building skill in right now.</p>
+
+  <a href="frontend-development.html" class="interest-card-link">
+  <div class="interest-card">
+    <div class="interest-icon">💻</div>
+    <h3>Front-end Development</h3>
+    <p>Turning ideas into clean, working interfaces with HTML, CSS, and JavaScript.</p>
+    <span class="card-hover">Click to explore →</span>
+  </div>
+</a>
+
+    <a href="problem-solving.html" class="interest-card-link">
+  <div class="interest-card">
+    <div class="interest-icon">🧩</div>
+    <h3>Problem Solving</h3>
+    <p>I enjoy breaking down tricky logic into small, solvable pieces — it's my favorite part of coding.</p>
+    <span class="card-hover">Click to explore →</span>
+  </div>
+</a>
+
+    <a href="ui-design.html" class="interest-card-link">
+  <div class="interest-card">
+    <div class="interest-icon">🎨</div>
+    <h3>UI Design</h3>
+    <p>Learning what makes an interface feel intuitive, not just functional.</p>
+    <span class="card-hover">Click to explore →</span>
+  </div>
+</a>
+
+   <a href="backend-basics.html" class="interest-card-link">
+  <div class="interest-card">
+    <div class="interest-icon">🗄️</div>
+    <h3>Backend Basics</h3>
+    <p>Exploring Python — working on how data moves behind the interfaces I build.</p>
+    <span class="card-hover">Click to explore →</span>
+  </div>
+</a>
+
+
+    <a href="version-control.html" class="interest-card-link">
+  <div class="interest-card">
+    <div class="interest-icon">🌿</div>
+    <h3>Version Control</h3>
+    <p>Getting comfortable with Git — tracking changes and building good project habits early.</p>
+    <span class="card-hover">Click to explore →</span>
+  </div>
+</a>
+    
+
+    <a href="continuous-learning.html" class="interest-card-link">
+  <div class="interest-card">
+    <div class="interest-icon">📚</div>
+    <h3>Continuous Learning</h3>
+    <p>Always picking up something new — one small project, one new concept at a time.</p>
+    <span class="card-hover">Click to explore →</span>
+  </div>
+</a>
+
+  <a href="about.html#experience" class="pill-btn" style="margin-top: 40px;">See my finished projects →</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>

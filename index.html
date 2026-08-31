@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omoniyi Emmanuel | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="preloader">
+  <div class="preloader-content">
+    <span class="preloader-prompt">&gt;</span>
+    <span id="preloader-text"></span>
+    <span class="preloader-cursor">_</span>
+  </div>
+</div>
+
+
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill active">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill">📦 Work</a>
+   <a href="blog.html" class="nav-pill">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-bg">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="hero-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <span class="badge">Computer Science Student</span>
+    <h1 class="hero-headline">Curiosity is the spark that turns code into solutions</h1>
+    <p class="subtitle">Omoniyi Emmanuel — building clean, functional interfaces while learning the fundamentals of computer science.</p>
+    <a href="about.html" class="pill-btn">👤 About — Emmanuel</a>
+
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </div>
+</header>
+
+<section class="mission fade-section">
+  <h2 class="mission-title">Learn<span class="accent">Build</span></h2>
+  <p class="mission-text">
+    I'm here to grow one project at a time — turning small ideas into real,
+    working code, learning the fundamentals deeply, and building things
+    that are simple, useful, and honestly made.
+  </p>
+</section>
+
+<section id="work" class="simple-section fade-section">
+  <p class="eyebrow">📦 Work</p>
+  <h2 class="simple-title">Selected Projects</h2>
+  <p class="simple-text">
+    A growing collection of small, real projects — built to learn by doing.
+  </p>
+  <a href="#" class="pill-btn">View Projects →</a>
+</section>
+
+<section id="blog" class="simple-section fade-section">
+  <p class="eyebrow">📰 Blog</p>
+  <h2 class="simple-title">Notes & Learning Logs</h2>
+  <p class="simple-text">
+    Coming soon — short write-ups on what I'm learning as a CS student.
+  </p>
+</section>
+
+<section id="gallery" class="simple-section fade-section">
+  <p class="eyebrow">🖼️ Gallery</p>
+  <h2 class="simple-title">Snapshots</h2>
+  <p class="simple-text">
+    Coming soon — screenshots and visuals from projects along the way.
+  </p>
+</section>
+
+<section class="feedback-section fade-section">
+  <div class="feedback-card">
+    <div class="feedback-icon">💌</div>
+    <p class="feedback-tag">STAY IN TOUCH</p>
+    <h2 class="feedback-title">Tell Me What You Think</h2>
+    <p class="feedback-subtext">
+      Got thoughts on my CV or portfolio? Something I should improve or try next?
+      Leave an anonymous message — I read every one.
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="feedback-form">
+      <textarea name="message" placeholder="Write your message here..." rows="4" required></textarea>
+      <button type="submit" class="btn">Send Anonymously →</button>
+    </form>
+
+    <div class="feedback-divider"></div>
+
+    <p class="feedback-subtext">Want updates when I post new projects?</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="subscribe-form">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn btn-secondary">Subscribe →</button>
+    </form>
+    <p class="feedback-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+
+  window.addEventListener('scroll', () => {
+    const hint = document.querySelector('.scroll-hint');
+    if (hint) hint.style.opacity = window.scrollY > 40 ? '0' : '1';
+  });
+
+  const fadeSections = document.querySelectorAll('.fade-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.2 });
+  fadeSections.forEach(section => observer.observe(section));
+</script>
+<script>
+  const preloaderText = "Welcome to Emmanuel's Portfolio";
+  const textEl = document.getElementById('preloader-text');
+  let i = 0;
+
+  function typeText() {
+    if (i < preloaderText.length) {
+      textEl.textContent += preloaderText.charAt(i);
+      i++;
+      setTimeout(typeText, 45);
+    } else {
+      setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.remove(), 600);
+      }, 500);
+    }
+  }
+
+  window.addEventListener('load', typeText);
+</script> 
+
+
+</body>
+</html>

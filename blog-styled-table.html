@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What I Learned Building My First Styled Table | Omoniyi Emmanuel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="location">Africa/Nigeria</span>
+  <div class="floating-nav">
+    <a href="index.html" class="nav-pill">🏠</a>
+    <a href="about.html" class="nav-pill">👤 About</a>
+    <a href="work.html" class="nav-pill">📦 Work</a>
+    <a href="blog.html" class="nav-pill active">📰 Blog</a>
+    <a href="gallery.html" class="nav-pill">🖼️ Gallery</a>
+  </div>
+  <div class="topbar-right">
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <span class="topbar-name">Emmanuel</span>
+  </div>
+</nav>
+
+<section class="blog-post">
+  <p class="eyebrow">📰 Post 01</p>
+  <h1 class="detail-title">What I Learned Building My First Styled Table</h1>
+
+  <p class="detail-text" style="text-align:left;">
+    My very first real project was a plain HTML table — just rows and columns with no
+    styling at all. It didn't look like much, but it taught me the basics of how tables
+    are structured in HTML: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, and <code>&lt;th&gt;</code>.
+  </p>
+
+  <p class="detail-text" style="text-align:left;">
+    The real learning started when I added CSS. Zebra striping (alternating row colors)
+    taught me the <code>:nth-child(even)</code> selector. Hover highlights taught me how
+    <code>:hover</code> works. Small details, but each one was a new concept.
+  </p>
+
+  <p class="detail-text" style="text-align:left;">
+    Later, I went back and added a live search bar and sortable columns using JavaScript —
+    which meant learning how to filter and sort arrays of data. What started as a simple
+    styling exercise turned into my first real taste of front-end interactivity.
+  </p>
+
+  <a href="styled-table.html" class="detail-link-card" style="display:inline-block; margin-top: 10px;">See the finished project →</a>
+
+  <br>
+  <a href="blog.html" class="back-link">← Back to Blog</a>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 / Omoniyi Emmanuel / My Learning Journey.</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>
